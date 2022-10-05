@@ -2,9 +2,9 @@ package entities;
 
 public class DeliveryCompany {
     private String deliveryCompanyName;
-    private final double pricePerKiloger=400;
+    private final double pricePerKilogram = 400;
     private double customer;
-    private final double maxCapacityPerSguareCentimeter=300;
+    private final double maxCapacityPerCubeSantimeter = 300;
 
     public DeliveryCompany(String deliveryCompanyName, double customer) {
         this.deliveryCompanyName = deliveryCompanyName;
@@ -19,8 +19,8 @@ public class DeliveryCompany {
         this.deliveryCompanyName = deliveryCompanyName;
     }
 
-    public double getPricePerKiloger() {
-        return pricePerKiloger;
+    public double getPricePerKilogram() {
+        return pricePerKilogram;
     }
 
     public double getCustomer() {
@@ -31,7 +31,7 @@ public class DeliveryCompany {
         this.customer = customer;
     }
 
-    public double getMaxCapacityPerSguareCentimeter() {
-        return maxCapacityPerSguareCentimeter;
+    public double getMaxCapacityPerCubeSantimeter() {
+        return maxCapacityPerCubeSantimeter;
     }
 }
