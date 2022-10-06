@@ -1,24 +1,23 @@
 package entities;
 
 public class Order {
-
-    private double orderFree;
+    private double orderFee;
     private Load load;
 
-    public Order(double orderFree, Load load) {
-        this.orderFree = orderFree;
+    public Order(double orderFee, Load load) {
+        this.orderFee = orderFee;
         this.load = load;
     }
 
     public Order() {
     }
 
-    public double getOrderFree() {
-        return orderFree;
+    public double getOrderFee() {
+        return orderFee;
     }
 
-    public void setOrderFree(double orderFree) {
-        this.orderFree = orderFree;
+    public void setOrderFee(double orderFee) {
+        this.orderFee = orderFee;
     }
 
     public Load getLoad() {
