@@ -12,6 +12,10 @@ public class Order {
     public Order() {
     }
 
+    public Order(Load load) {
+        this.load = load;
+    }
+
     public double getOrderFee() {
         return orderFee;
     }
@@ -27,4 +31,12 @@ public class Order {
     public void setLoad(Load load) {
         this.load = load;
     }
+
+    @Override
+    public String toString() {
+        return "Order:" +
+                "orderFee = " + orderFee + '\n'+
+                "load = " + load + '\n';
+    }
 }
+
