@@ -13,6 +13,13 @@ public class Customer {
     }
 
     public Customer() {
+
+    }
+    public Customer(String customerName) {
+        this.customerName = customerName;
+    }
+    public void addOrder(Order order){
+        this.orders.add(order);
     }
 
     public String getCustomerName() {
@@ -29,5 +36,12 @@ public class Customer {
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer\n" +
+                "customerName = " + customerName + '\n' +
+                "orders = " + orders + '\n';
     }
 }
