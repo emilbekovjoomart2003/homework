@@ -5,21 +5,13 @@ import java.util.List;
 
 public class Customer {
     private String customerName;
-   private List <Order> orders = new ArrayList<>();
-
-    public Customer(String customerName, List<Order> orders) {
-        this.customerName = customerName;
-        this.orders = orders;
-    }
+    private Order order;
 
     public Customer() {
-
     }
+
     public Customer(String customerName) {
         this.customerName = customerName;
-    }
-    public void addOrder(Order order){
-        this.orders.add(order);
     }
 
     public String getCustomerName() {
@@ -30,18 +22,18 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     @Override
     public String toString() {
-        return "Customer\n" +
-                "customerName = " + customerName + '\n' +
-                "orders = " + orders + '\n';
+        String s1 = String.format("%-12s|", customerName);
+        String s2 = String.format("%-20s", order);
+        return s1 + s2;
     }
 }

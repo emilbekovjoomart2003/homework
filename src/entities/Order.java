@@ -4,15 +4,15 @@ public class Order {
     private double orderFee;
     private Load load;
 
-    public Order(double orderFee, Load load) {
-        this.orderFee = orderFee;
-        this.load = load;
-    }
-
     public Order() {
     }
 
     public Order(Load load) {
+        this.load = load;
+    }
+
+    public Order(double orderFee, Load load) {
+        this.orderFee = orderFee;
         this.load = load;
     }
 
@@ -34,9 +34,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order:" +
-                "orderFee = " + orderFee + '\n'+
-                "load = " + load + '\n';
+        return "Order{orderFee=" + orderFee + ", " + load + '}';
     }
 }
 

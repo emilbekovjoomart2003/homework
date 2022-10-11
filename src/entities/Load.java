@@ -6,14 +6,14 @@ public class Load {
     private double length;
     private double weight;
 
+    public Load() {
+    }
+
     public Load(double height, double width, double length, double weight) {
         this.height = height;
         this.width = width;
         this.length = length;
         this.weight = weight;
-    }
-
-    public Load() {
     }
 
     public double getHeight() {
@@ -49,12 +49,7 @@ public class Load {
     }
 
     @Override
-    public String  toString() {
-        return "Load{" +
-                "height = " + height +
-                "width = " + width +
-                "length = " + length +
-                "weight = " + weight +
-                '}';
+    public String toString() {
+        return "Load{volume=" + (height * width * length) + ", weight=" + weight + '}';
     }
 }

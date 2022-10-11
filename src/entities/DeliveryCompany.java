@@ -9,11 +9,6 @@ public class DeliveryCompany {
     private List<Customer> customers = new ArrayList<>();
     private final double maxCapacityPerCubeCentimeter = 300;
 
-    public DeliveryCompany(String deliveryCompanyName, List<Customer> customers) {
-        this.deliveryCompanyName = deliveryCompanyName;
-        this.customers = customers;
-    }
-
     public DeliveryCompany(String deliveryCompanyName) {
         this.deliveryCompanyName = deliveryCompanyName;
     }
@@ -30,6 +25,10 @@ public class DeliveryCompany {
         return pricePerKilogram;
     }
 
+    public double getMaxCapacityPerCubeCentimeter() {
+        return maxCapacityPerCubeCentimeter;
+    }
+
     public List<Customer> getCustomers() {
         return customers;
     }
@@ -38,17 +37,13 @@ public class DeliveryCompany {
         this.customers = customers;
     }
 
-    public double getMaxCapacityPerCubeCentimeter() {
-        return maxCapacityPerCubeCentimeter;
-    }
-
     @Override
     public String toString() {
-        return "DeliveryCompany:\n" +
-                "deliveryCompanyName = " + deliveryCompanyName + '\n' +
-                "pricePerKilogram = " + pricePerKilogram + '\n' +
-                "customers = " + customers +
-                "maxCapacityPerCubeCentimeter = " + maxCapacityPerCubeCentimeter + '\n';
+        String s1 = String.format("%-12s|", deliveryCompanyName);
+        String s2 = String.format("%-12s|", pricePerKilogram);
+        String s3 = String.format("%-12s|", maxCapacityPerCubeCentimeter);
+        String s4 = String.format("%-20s", customers.stream().map(x -> x.getCustomerName()).toList());
+        return s1 + s2 + s3 + s4;
     }
 }
 
